@@ -1,7 +1,20 @@
 import { useState } from "react";
 
-const AddNote = () => {
+const AddNote = ({ handleAddNote }) => {
     const [noteText, setNoteText] = useState('');
+    const characterLimit = 200;
+
+    const handleChange = (event) => {
+        if (characterLimit - event.target.value.length >= 0)
+            setNoteText(event.target.value);
+    }
+
+    const handleSaveClick = (event) => {
+        if (noteText.trim().length > 0)
+            handleAddNote(noteText);
+        setNoteText('');
+    }
+
     return (
         <div className="bg-[#67d7cc] flex flex-col min-h-[170px] p-4 rounded-xl
         mb-3 justify-between">
@@ -10,14 +23,17 @@ const AddNote = () => {
                 cols='10'
                 placeholder="Type to add a note..."
                 className="border-none resize-none bg-inherit
-                    focus:outline-none">
+                    focus:outline-none"
+                onChange={handleChange}
+                value={noteText}>
             </textarea>
 
             <div className="flex items-center justify-between">
-                <small>200 Remaining</small>
+                <small>{characterLimit - noteText.length} Remaining</small>
                 <button className="bg-[#e1e1e1] border-none
                     rounded-[15px] pt-[5px] pb-[5px] pl-[10px] pr-[10px]
-                    hover:cursor-pointer hover:bg-[#ededed]">Save</button>
+                    hover:cursor-pointer hover:bg-[#ededed]"
+                    onClick={handleSaveClick}>Save</button>
             </div>
         </div>
     )
