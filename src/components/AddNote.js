@@ -32,7 +32,7 @@ const AddNote = ({ handleAddNote }) => {
                 <small>{characterLimit - noteText.length} Remaining</small>
                 <button className="bg-[#e1e1e1] border-none
                     rounded-[15px] pt-[5px] pb-[5px] pl-[10px] pr-[10px]
-                    hover:cursor-pointer hover:bg-[#ededed]"
+                    hover:cursor-pointer hover:bg-[#ededed] font-semibold"
                     onClick={handleSaveClick}>Save</button>
             </div>
         </div>
