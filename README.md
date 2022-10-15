@@ -5,5 +5,5 @@ This is a web app created for note taking. It supports all the operations over n
 ## Tech Stack Used to create this App :
 - **HTML**
 - **JavaScript**
-- **ReactJS**
+- **React JS**
 - **Tailwind CSS**
