@@ -69,10 +69,10 @@ const App = () => {
         <Header handleToggleDarkMode={setDarkMode} />
         <Search handleSearchNote={setSearchText} />
         <NotesList
-          notes={notes.filter((note) => note.text.toLowerCase().includes(searchText))}
+          notes={notes.filter((note) => note.text.toLowerCase().includes(searchText.toLowerCase()))}
           handleAddNote={addNote}
           handleDeleteNote={deleteNote} />
-          
+
         <div className='flex justify-center font-semibold' id={`${darkMode && 'by'}`}>Made with
           <span className='text-[#e25555] ml-2 mr-2'>   &#10084;   </span>
           by Dhaval Panjwani</div>
