@@ -7,3 +7,5 @@ This is a web app created for note taking. It supports all the operations over n
 - **JavaScript**
 - **React JS**
 - **Tailwind CSS**
+
+Checkout the demo here at => https://my-notes-app-orcin.vercel.app/ 
