@@ -16,14 +16,14 @@ const AddNote = ({ handleAddNote }) => {
     }
 
     return (
-        <div className="bg-[#67d7cc] flex flex-col min-h-[170px] p-4 rounded-xl
+        <div className="bg-[#efe2ef] flex flex-col min-h-[170px] p-4 rounded-xl
         mb-3 justify-between">
             <textarea
                 rows='8'
                 cols='10'
-                placeholder="Type to add a note..."
+                placeholder="Start typing to add a new note..."
                 className="border-none resize-none bg-inherit
-                    focus:outline-none"
+                    focus:outline-none font-semibold text-black placeholder-black"
                 onChange={handleChange}
                 value={noteText}>
             </textarea>
